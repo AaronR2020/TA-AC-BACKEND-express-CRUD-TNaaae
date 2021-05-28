@@ -1,23 +1,23 @@
-var express = require('express')
+var express = require('express');
 var router = express.Router()
-
 Student=require('../models/student');
 
 //student>GET:/students/new
-router.get('./new',(req,res)=>{
+router.get('/new',(req,res)=>{
     res.render('form');
 });
 
 //student>POST:/students/route
-router.post('./route',(req,res)=>{
+router.post('/route',(req,res)=>{
+    console.log(req.body);
 studentInfo=req.body;
-Student.create(studentInfo,(e,d)=>{
-    console.log(e?e:d);
-});
+//problem here>not saving in db
+Student.create(studentInfo);
+res.redirect('/route')
 });
 
 //student>GET:/students/route
-router.get('./route',(req,res)=>{
+router.get('/route',(req,res)=>{
 Student.find({},(e,d)=>{
     if(e){console.log(e);}
     else{
@@ -27,5 +27,5 @@ Student.find({},(e,d)=>{
 })
 });
 
-module.export=router;
+module.exports=router;
 
