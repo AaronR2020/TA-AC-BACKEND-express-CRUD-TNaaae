@@ -15,6 +15,8 @@ Inside students routes file, create routes to
   ```js
   res.render("students", { list: ["ankit", "suraj", "prashant", "ravi"] });
   ```
+....................................................
+on view
 
   - display list using <% list.forEach(l => {}) %>
 
