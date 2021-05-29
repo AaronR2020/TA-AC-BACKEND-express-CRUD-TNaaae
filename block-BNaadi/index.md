@@ -1,10 +1,9 @@
 writeCode
 
 Q. Create an express application named `user-diary-2`
-
-- use ejs as template engine
-- connect to mongodb database
-- use public to store static assets
+- use ejs as template engine.
+- connect to mongodb database.
+- use public to store static assets.
 
 Handle CRUD operation and display user content in respective HTML pages using ejs templates.
 
@@ -36,7 +35,7 @@ First, we are going to read/fetch all user data and render them onto a webpage u
   - fetch list of all users from database using `User` model
   - render a template named `listUsers` and pass users list which is an array received from database as second argument to render method so that users array is availbale inside templates.
   - inside `listUsers` template run `forEach` loop to render all user's name.
-
+................................................
 Second, fetch a single user information and display it on webpage using a template
 
 - In users router, handle `GET` request on `/users/:id` where
